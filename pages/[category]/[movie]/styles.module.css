@@ -1,0 +1,124 @@
+
+.movieContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 120px 0px;
+}
+
+.movieOverlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: block;
+    top: 0;
+    left: 0;
+    filter: blur(20px);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 7, 28, 0.644)), url("https://image.tmdb.org/t/p/original//sv1xJUazXeYqALzczSZ3O6nkH75.jpg");
+    z-index: -1;
+    
+}
+
+
+.imageContainer {
+    position: relative;
+    width: 360px;
+}
+
+.imageContainer img {
+    width: inherit;
+    height: auto !important;
+    border-radius: 10px;
+}
+
+
+.movieContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.movieTitle {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+}
+
+
+.tabs{
+    display: flex;
+    gap: 45px;
+}
+
+
+
+.tabLink{
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 3px solid transparent;
+}
+
+.active{
+    color: #dcf836 !important;
+    border-bottom: 3px solid #dcf836 !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.tabContent{
+    display: none;
+    padding: 10px 0px;
+}
+
+
+.tabContentDescription{
+    font-size: 16px;
+    color: #abb7c4;
+    font-weight: 400;
+    line-height: 24px !important;
+}
+
+
+
+.group{
+    margin: 15px 0px;
+    margin-top: 30px;
+}
+
+.groupHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.groupHeadTitle{
+    font-size: 18px;
+    color: white;
+}
+
+.groupHeadLink{
+    font-weight: 500;
+    color:#abb7c4;
+}
+
+
+.galleryContainer{
+    display: block;
+    border-radius: 5px;
+}
+
+
+.galleryImage{
+    border-radius: 5px;
+}
+
+
