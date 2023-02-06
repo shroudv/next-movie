@@ -1,0 +1,33 @@
+.listContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-top: 30px;
+}
+
+
+
+
+.categoryTitle {
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 25px;
+}
+
+
+.movieList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+}
+
+
+@media all and (max-width: 480px) {
+    .movieList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 50px;
-    padding: 120px 0px;
+    padding-top: 50px;
 }
 
 .movieOverlay{
@@ -34,6 +34,7 @@
 }
 
 
+
 .movieContent {
     width: 50%;
     display: flex;
@@ -42,25 +43,27 @@
     flex: 1;
 }
 
+
+
 .movieTitle {
-    font-size: 36px;
+    font-size: 33px;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: none;
-    margin-bottom: 25px;
 }
 
 
 .tabs{
     display: flex;
     gap: 45px;
+    margin-bottom: 15px;
 }
 
 
 
 .tabLink{
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 600;
     padding-bottom: 15px;
     border-bottom: 3px solid transparent;
 }
@@ -113,12 +116,41 @@
 
 .galleryContainer{
     display: block;
+    position: relative;
     border-radius: 5px;
 }
 
 
 .galleryImage{
+    position: unset !important;
     border-radius: 5px;
 }
 
 
+
+
+@media all and (max-width: 480px) {
+
+    .movieContainer{
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 20px !important;
+    }
+
+    .imageContainer{
+        width: 100%;
+    }
+
+    .imageContainer img {
+        position: unset !important;
+    }
+
+    .movieContent{
+        width: 100% !important;
+        gap: 15px !important;
+    }
+
+    .movieTitle{
+        margin-bottom: 0 !important;
+    }
+}

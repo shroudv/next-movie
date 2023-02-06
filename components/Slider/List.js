@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Movie from '@/components/Movie/Card'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper';
+import { Autoplay, FreeMode } from 'swiper';
 
 export default function List(props) {
   const [slider, setSlider] = useState({
@@ -13,8 +13,12 @@ export default function List(props) {
     >
       <div className="sliders container">
         <Swiper
-          modules={FreeMode}
+          modules={[Autoplay,FreeMode]}
           loop={true}
+          autoplay={{
+            delay: 4500,
+            disableOnInteraction: false,
+          }}
           spaceBetween={10}
           slidesPerView={4}
           onSlideChange={(swiperCore) => {
@@ -24,6 +28,14 @@ export default function List(props) {
           onAfterInit={(swiperCore) => {
             const { realIndex } = swiperCore;
             setSlider({ selectedSlide: realIndex })
+          }}
+          breakpoints={{
+            240: {
+              slidesPerView: 1
+            },
+            1200: {
+              slidesPerView: 4
+            }
           }}
         >
           {
